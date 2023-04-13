@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bullet {
+  @apply w-4 h-4 bg-gradient-to-br from-violet-200 to-violet-300 rounded-full relative;
+}
+
+.bullet-inside {
+  @apply w-2.5 h-2.5 bg-gradient-to-br from-purple-300 to-purple-600 z-10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.status {
+  @apply py-1 px-6 w-32 text-center rounded-full;
+}
+
+.pending {
+  @apply text-orange-400 bg-orange-100;
+}
+
+.in-progress {
+  @apply text-indigo-400 bg-indigo-100;
+}
+
+.completed {
+  @apply text-emerald-400 bg-emerald-100;
+}
+
+.cancelled {
+  @apply text-red-400 bg-red-100;
+}
+
+.level {
+  @apply w-3 h-3 border-[3.5px] rounded-full;
+}
+
+.minor {
+  @apply border-green-600;
+}
+
+.normal {
+  @apply border-yellow-500;
+}
+
+.critical {
+  @apply border-red-600;
+}
+
+.todo-menu {
+  @apply h-8 w-8 p-1 bg-gray-200 rounded-full relative cursor-pointer;
+}
+
+.todo-menu-btn {
+  @apply flex items-center gap-2 w-full transition-all ease-in-out;
+}
+
+.todo-menu-btn p {
+  @apply transition-all ease-in-out;
+}
+
+.todo-menu-btn:hover>p {
+  @apply translate-x-2;
+}
+
+.add-todo-input {
+  @apply border w-full px-2 py-[6px] rounded-[4px] border-gray-300;
+}
+
+.add-todo-input:focus {
+  @apply outline-none;
+}
